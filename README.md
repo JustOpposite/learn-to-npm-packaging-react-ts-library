@@ -1,9 +1,16 @@
 # Steps to create a React Typescript npm library
 
+## This tutorial is based on [Article by Igor Gaponov](https://betterprogramming.pub/how-to-create-and-publish-react-typescript-npm-package-with-demo-and-automated-build-80c40ec28aca)
+
 ```bash
+su npm i -g pnpm
+
 mkdir <lib name>
+
 cd <lib name>
+
 npm init -y
+
 pnpm i -D react react-dom typescript @types/react
 ```
 
@@ -249,7 +256,6 @@ README.md
 
 \$ pnpm run prettier
 
-
 \$ pnpm add -D jest jest-canvas-mock jest-environment-jsdom ts-jest @types/jest @testing-library/react tslib
 
 \$ touch jestconfig.json ___with following:___
@@ -362,5 +368,21 @@ describe('Common render', () => {
 
 \$ git add .
 \$ git commit -m "Initial commit"
-\$ git remote add origin git@github.com:JustOpposite/learn-to-npm-packaging-react-ts-library.git
+\$ git remote add origin <git@github.com>:JustOpposite/learn-to-npm-packaging-react-ts-library.git
 \$ git push -u origin main
+
+Alternative is to clone the repo first then make changes before git push
+
+## Publish to NPM
+
+Assuming you have an user created on npm
+
+\$ npm login
+
+\$ npm publish --dry-run
+
+If there are no errors then
+
+\$ npm publish
+
+Press Enter to open in browser, when prompted for 2FA code, open up Duo for OTP
