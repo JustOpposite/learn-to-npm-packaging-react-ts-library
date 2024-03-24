@@ -1,6 +1,6 @@
 {
   "name": "learn-to-npm-packaging-react-ts-library",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "This is just an sample project to learn how to build and deploy a react typescript library",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
